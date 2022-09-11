@@ -93,7 +93,7 @@ http://localhost:8092/api/tpIdentificacion
 ## 5.1 - Desarrollo de pruebas unitarias
 
 
-# 5 - Instalación Docker:
+# 6 - Instalación Docker:
 	https://docs.docker.com/desktop/install/windows-install/
 	
-## 5.1 - Generación de archivo docker de cada proyecto
+## 6.1 - Generación de archivo docker de cada proyecto
