@@ -65,10 +65,10 @@ Desde la web: https://start.spring.io/
 
 ## 3.5 - URL de acceso a los metodos desarrollados:
 
-http://localhost:8080/swagger-ui.html#/planes-controller/getPlanUsingGET
-http://localhost:8091/api/clientes
-http://localhost:8092/api/planesMP
-http://localhost:8092/api/tpIdentificacion
+	* http://localhost:8080/swagger-ui.html#/planes-controller/getPlanUsingGET
+	* http://localhost:8091/api/clientes
+	* http://localhost:8092/api/planesMP
+	* http://localhost:8092/api/tpIdentificacion
 
 ## 3.6 - Comandos bash para el manejo de los microservicios con Maven:
 
