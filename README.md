@@ -57,15 +57,14 @@ Desde la web: https://start.spring.io/
 ## 3.3 - Implementacion de swagger para la documentacion de las APIs.
 
 * URL de acceso:
-					- http://localhost:8091/swagger-ui.html
-					- http://localhost:8092/swagger-ui.html
+					* http://localhost:8091/swagger-ui.html
+					* http://localhost:8092/swagger-ui.html
 
 ## 3.4 - Configuración de credenciales de origenes de datos en el archivo: application.properties de cada microservicio
 
 
 ## 3.5 - URL de acceso a los metodos desarrollados:
 
-	* http://localhost:8080/swagger-ui.html#/planes-controller/getPlanUsingGET
 	* http://localhost:8091/api/clientes
 	* http://localhost:8092/api/planesMP
 	* http://localhost:8092/api/tpIdentificacion
