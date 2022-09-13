@@ -1,0 +1,40 @@
+<br>
+<h4>Clientes registrados: </h4>    
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th> TpDocumento </th>
+            <th> NoDocumento </th>
+            <th> 1°Nombre </th>
+            <th> 2°Nombre </th>
+            <th> 1°Apellido </th>
+            <th> 2°Nombre </th>
+            <th> FchNacimiento </th>
+            <th> Email </th>
+            <th> Direccion </th>
+            <th> Celular </th>
+            <th> Plan </th>
+            <th> Acciones </th>
+        </tr>
+    </thead>    
+    <tbody>
+        <tr *ngFor="let cli of arrClientes">
+            <td> {{cli.idtpidentcliente}} </td>
+            <td> {{cli.numidentcliente}} </td>
+            <td> {{cli.nombre1}} </td>
+            <td> {{cli.nombre2}}  </td>
+            <td> {{cli.apellido1}}  </td>
+            <td> {{cli.apellido2}}  </td>
+            <td> {{cli.fecnacimiento | date:'dd/MM/yyyy' }}  </td>
+            <td> {{cli.direccionresid}}  </td>
+            <td> {{cli.email}}  </td>
+            <td> {{cli.numcelular}}  </td>
+            <td> {{cli.idplan}}  </td>
+            <td> 
+                <button (click)= "eliminarCliente(cli.id)" class="btn btn-danger" >Eliminar </button>            
+                <button class="btn btn-info" style="margin-left : 10px;">Modificar </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

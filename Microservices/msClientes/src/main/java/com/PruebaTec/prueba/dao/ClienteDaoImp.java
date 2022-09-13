@@ -17,7 +17,6 @@ public class ClienteDaoImp implements ClienteDao{
         List<Clientes> resultado=entityManager.createQuery(query).getResultList();
         return resultado;
     }
-
     @Override
     public void eliminarCliente(Long id) {
         Clientes cli=entityManager.find(Clientes.class, id);
@@ -28,6 +27,26 @@ public class ClienteDaoImp implements ClienteDao{
     public void agregarCliente(Clientes cli) {
         entityManager.merge(cli);
     }
+
+ /*
+    @Override
+    public void actualizarCliente(Long id, Clientes cli) {
+        Clientes cliX=entityManager.find(Clientes.class, id);
+        cliX.setNombre1(cli.getNombre1());
+        cliX.setNombre2(cli.getNombre2());
+        cliX.setApellido1(cli.getApellido1());
+        cliX.setApellido2(cli.getApellido2());
+        entityManager.merge(cliX);
+    }
+
+    @Override
+    public Clientes buscarCliente(Long id) {
+        List<Clientes> resultado = new List<Clientes>;
+        Clientes cli=entityManager.find(Clientes.class, id);
+        //resultado=entityManager.createQuery(query).getResultList();
+        return cli;
+    }
+*/
 }
 
 

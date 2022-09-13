@@ -78,15 +78,16 @@ http://localhost:8092/api/tpIdentificacion
 
 # 4 - Creación de proyecto Frontend Angular: 
 
-
-## 4.1 - Xxxxx
-
-## 4.2 - Xxxxx
-
-## 4.3 - Xxxxx
-
-## 4.4 - Xxxxx
-
+	* Creación del proyecto de la aplicacion
+	* Generación de la clase de typeScript de Clientes: ng g class cliente
+	* Generación del componente de listado de Clientes: ng g c lista-clientes
+	* Generación del componente de registro de Clientes: ng g c registrar-clientes
+	* Generación del servicio de listado de Clientes: ng g s cliente
+	* Instalar estilos de mensajes de alertas: npm install --save sweetalert2@7.26.9
+	* Generación del componente de listado de Tipos de documentos: ng g c lista-TpDoc
+	* Generación del servicio de listado de Tipos de documentos: ng g s TpDocumentos
+	* Generación del componente de listado de Planes Med Prepagada: ng g c lista-PlanesMP
+	* Generación del servicio de listado de Tipos de documentos: ng g s TpDocumentos
 
 # 5 - Creación de pruebas unitarias de los microservicios:
 		

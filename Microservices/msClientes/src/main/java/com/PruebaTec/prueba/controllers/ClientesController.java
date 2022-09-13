@@ -2,10 +2,12 @@ package com.PruebaTec.prueba.controllers;
 import com.PruebaTec.prueba.dao.ClienteDao;
 import com.PruebaTec.prueba.models.Clientes;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200/")
 public class ClientesController {
     @Autowired
     private ClienteDao cliDao;
@@ -13,7 +15,6 @@ public class ClientesController {
     // Listar Clientes
     @RequestMapping (value = "api/clientes", method = RequestMethod.GET)
     public List<Clientes> getClientes() {
-
         return cliDao.getClientes();
     }
 
@@ -23,11 +24,25 @@ public class ClientesController {
         cliDao.eliminarCliente(id);
     }
 
+    // Agregar Clientes
     @RequestMapping (value = "api/clientes", method = RequestMethod.POST)
     public void agregarCliente(@RequestBody Clientes cli) {
         cliDao.agregarCliente(cli);
     }
+/*
+    // Actualizar Clientes
+    @RequestMapping (value = "api/clientes", method = RequestMethod.POST)
+    public void actualizarCliente(@PathVariable Long id, @RequestBody Clientes cli) {
+        cliDao.actualizarCliente(id, cli);
+    }
 
+    // Buscar Cliente
+    @GetMapping ("api/clientes/{id}")
+    public Clientes obtenerClientePorId(@PathVariable Long id) {
+        Clientes cli = cliDao.buscarCliente(id);
+        return cli;
+    }
+    */
 
 }
 

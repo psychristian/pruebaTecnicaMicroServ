@@ -48,5 +48,5 @@ public class Clientes {
     private long idplan;
 
     @Getter @Setter @Column(name="fecnacimiento")
-    private LocalDateTime fecnacimiento;
+    private LocalDate fecnacimiento;
 }

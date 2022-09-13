@@ -1,0 +1,197 @@
+<br>
+<div class="col-md-6 offset-md-3"> 
+<h3 class="text-center"> Agregar información del cliente</h3> 
+<br>
+<form (ngSubmit)= "onSubmit()" #clienForm = "ngForm">    
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group"> 
+                <label>Tipo de Identificacion: </label>
+                <input type="text"
+                class="form-control"
+                id="idtpidentcliente"
+                [(ngModel)] = "clien.idtpidentcliente" 
+                name="idtpidentcliente"
+                required
+                #tpident="ngModel">
+                <div class="alert alert-danger" *ngIf= "tpident.invalid && (tpident.dirty || tpident.touched)">
+                    <div *ngIf= "tpident.hasError('required')"  class = "text-danger"> 
+                            El tipo de Identificacion es obligatorio
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group"> 
+                <label>Numero de Identificacion: </label>
+                <input type="text"
+                class="form-control"
+                id="numidentcliente"
+                [(ngModel)] = "clien.numidentcliente" 
+                name="numidentcliente"
+                required
+                placeholder="Digite el Numero de Identificacion"
+                minlength="6"
+                maxlength="20"
+                #numident="ngModel">
+                <div class="alert alert-danger" *ngIf= "numident.invalid && (numident.dirty || numident.touched)">
+                    <div *ngIf= "numident.hasError('required')"  class = "text-danger"> 
+                            El Numero de Identificacion es obligatorio
+                    </div>
+                    <div *ngIf= "numident.hasError('minlength')"  class = "text-danger"> 
+                            El Numero de Identificacion debe ser mayor a 5 caracteres
+                    </div>
+                    <div *ngIf= "numident.hasError('maxlength')"  class = "text-danger"> 
+                            El Numero de Identificacion debe ser maximo de 20 caracteres
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group"> 
+                <label>Primer Nombre: </label>
+                <input type="text"
+                class="form-control"
+                id="nombre1"
+                [(ngModel)] = "clien.nombre1" 
+                name="nombre1"
+                required 
+                placeholder="Digite el primer nombre"               
+                #nom1="ngModel">
+                <div class="alert alert-danger" *ngIf= "nom1.invalid && (nom1.dirty || nom1.touched)">
+                    <div *ngIf= "nom1.hasError('required')"  class = "text-danger"> 
+                            El primer nombre es obligatorio
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group"> 
+                <label>Segundo Nombre: </label>
+                <input type="text"
+                class="form-control"
+                id="nombre2"
+                [(ngModel)] = "clien.nombre2" 
+                name="nombre2"
+                placeholder="Digite el segundo Nombre" >
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group"> 
+                <label>Primer Apellido: </label>
+                <input type="text"
+                class="form-control"
+                id="apellido1"
+                [(ngModel)] = "clien.apellido1" 
+                name="apellido1"
+                required  
+                placeholder="Digite el primer apellido"                
+                #ape1="ngModel">
+                <div class="alert alert-danger" *ngIf= "ape1.invalid && (ape1.dirty || ape1.touched)">
+                    <div *ngIf= "ape1.hasError('required')"  class = "text-danger"> 
+                            El primer apellido es obligatorio
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group"> 
+                <label>Segundo Apellido: </label>
+                <input type="text"
+                class="form-control"
+                id="apellido2"
+                [(ngModel)] = "clien.apellido2" 
+                name="apellido2"
+                placeholder="Digite el segundo apellido">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group"> 
+                <label>Fecha Nacimiento: </label>
+                <input type="date"
+                class="form-control"
+                id="fecnacimiento"
+                [(ngModel)] = "clien.fecnacimiento" 
+                name="fecnacimiento">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group"> 
+                <label>Email: </label>
+                <input type="text"
+                class="form-control"
+                id="email"
+                [(ngModel)] = "clien.email" 
+                name="email"
+                pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
+                required   
+                placeholder="usuario@dominio.com"             
+                #eml="ngModel">
+                <div class="alert alert-danger" *ngIf= "eml.invalid && (eml.dirty || eml.touched)">
+                    <div *ngIf= "eml.hasError('required')"  class = "text-danger"> 
+                            El email es obligatorio
+                    </div>
+                    <div *ngIf= "eml.hasError('pattern')" class = "text-danger"> 
+                        Digite un email válido. usuario@dominio.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group"> 
+                <label>Dirección: </label>
+                <input type="text"
+                class="form-control"
+                id="direccionresid"
+                [(ngModel)] = "clien.direccionresid" 
+                name="direccionresid">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group"> 
+                <label>Celular: </label>
+                <input type="text"
+                class="form-control"
+                id="numcelular"
+                [(ngModel)] = "clien.numcelular" 
+                name="numcelular">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12" >
+            <div class="form-group"> 
+                <label>Plan de preferencia: </label>
+                <input type="text"
+                class="form-control"
+                id="idplan"
+                [(ngModel)] = "clien.idplan" 
+                name="idplan"
+                required
+                #plan="ngModel">
+                <div class="alert alert-danger" *ngIf= "plan.invalid && (plan.dirty || plan.touched)">
+                    <div *ngIf= "plan.hasError('required')"  class = "text-danger"> 
+                            El tipo de Plan de Medicina prepagada es obligatorio
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <button class="btn btn-success" [disabled]= "!clienForm.form.valid"> Guardar </button>
+</form>
+
+
+</div>
