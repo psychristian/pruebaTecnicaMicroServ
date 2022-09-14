@@ -92,9 +92,6 @@ Desde la web: https://start.spring.io/
 	* Generación del servicio de listado de Tipos de documentos: ng g s TpDocumentos
 	* Generación del servicio de listado de Planes Med Prepagada: ng g s planesMedP
 	
-	* Generación del componente de listado de Planes Med Prepagada: ng g c lista-PlanesMP
-	* Generación del componente de listado de Tipos de documentos: ng g c lista-TpDoc
-	
 
 # 5 - Creación de pruebas unitarias de los microservicios:
 		
