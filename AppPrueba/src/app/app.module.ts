@@ -6,12 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrarClienteComponent } from './registrar-cliente/registrar-cliente.component';
 import { FormsModule } from '@angular/forms';
+import { MayusculaPipe } from './pipes/mayuscula.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaClientesComponent,
-    RegistrarClienteComponent
+    RegistrarClienteComponent,
+    MayusculaPipe
+    //UppercasePipe
   ],
   imports: [
     BrowserModule,

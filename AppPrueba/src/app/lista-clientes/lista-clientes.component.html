@@ -22,10 +22,10 @@
         <tr *ngFor="let cli of arrClientes">
             <td> {{cli.idtpidentcliente}} </td>
             <td> {{cli.numidentcliente}} </td>
-            <td> {{cli.nombre1}} </td>
-            <td> {{cli.nombre2}}  </td>
-            <td> {{cli.apellido1}}  </td>
-            <td> {{cli.apellido2}}  </td>
+            <td> {{cli.nombre1 | mayuscula}} </td>
+            <td> {{cli.nombre2 | mayuscula}}  </td>
+            <td> {{cli.apellido1 | mayuscula}}  </td>
+            <td> {{cli.apellido2 | mayuscula}}  </td>
             <td> {{cli.fecnacimiento | date:'dd/MM/yyyy' }}  </td>
             <td> {{cli.direccionresid}}  </td>
             <td> {{cli.email}}  </td>

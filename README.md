@@ -79,14 +79,22 @@ Desde la web: https://start.spring.io/
 
 	* Creación del proyecto de la aplicacion
 	* Generación de la clase de typeScript de Clientes: ng g class cliente
+	* Generación de la clase de typeScript de Tipos de documentos: ng g class tpDoc
+	* Generación de la clase de typeScript de Planes Med Prepagada: ng g class planesMP
+	
+	* Generación de Pipe: ng g p pipes/mayuscula
+	
 	* Generación del componente de listado de Clientes: ng g c lista-clientes
 	* Generación del componente de registro de Clientes: ng g c registrar-clientes
 	* Generación del servicio de listado de Clientes: ng g s cliente
 	* Instalar estilos de mensajes de alertas: npm install --save sweetalert2@7.26.9
-	* Generación del componente de listado de Tipos de documentos: ng g c lista-TpDoc
+	
 	* Generación del servicio de listado de Tipos de documentos: ng g s TpDocumentos
+	* Generación del servicio de listado de Planes Med Prepagada: ng g s planesMedP
+	
 	* Generación del componente de listado de Planes Med Prepagada: ng g c lista-PlanesMP
-	* Generación del servicio de listado de Tipos de documentos: ng g s TpDocumentos
+	* Generación del componente de listado de Tipos de documentos: ng g c lista-TpDoc
+	
 
 # 5 - Creación de pruebas unitarias de los microservicios:
 		
@@ -97,3 +105,10 @@ Desde la web: https://start.spring.io/
 	https://docs.docker.com/desktop/install/windows-install/
 	
 ## 6.1 - Generación de archivo docker de cada proyecto
+
+
+# 7 - Utiles:
+
+### 7.1 - Comando comprobar puertos abiertos en windows
+  netstat -aon
+  taskkill /F /PID colocar_pid

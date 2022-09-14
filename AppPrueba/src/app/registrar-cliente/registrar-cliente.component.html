@@ -7,18 +7,15 @@
         <div class="col-6">
             <div class="form-group"> 
                 <label>Tipo de Identificacion: </label>
-                <input type="text"
-                class="form-control"
-                id="idtpidentcliente"
-                [(ngModel)] = "clien.idtpidentcliente" 
-                name="idtpidentcliente"
-                required
-                #tpident="ngModel">
+                <select class="form-control" id="idtpidentcliente" [(ngModel)] = "clien.idtpidentcliente"  
+                        name="idtpidentcliente" required  #tpident="ngModel"> 
+                    <option *ngFor="let tpIden of arrTpDoc" [value]="tpIden.id">{{tpIden.codtpident}} - {{tpIden.desctpident}}</option>
+                </select>
                 <div class="alert alert-danger" *ngIf= "tpident.invalid && (tpident.dirty || tpident.touched)">
                     <div *ngIf= "tpident.hasError('required')"  class = "text-danger"> 
                             El tipo de Identificacion es obligatorio
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
         <div class="col-6">
@@ -172,13 +169,10 @@
         <div class="col-12" >
             <div class="form-group"> 
                 <label>Plan de preferencia: </label>
-                <input type="text"
-                class="form-control"
-                id="idplan"
-                [(ngModel)] = "clien.idplan" 
-                name="idplan"
-                required
-                #plan="ngModel">
+                <select class="form-control" id="idplan" [(ngModel)] = "clien.idplan"  
+                        name="idplan" required  #plan="ngModel"> 
+                    <option *ngFor="let tpPlan of arrPlanesMP" [value]="tpPlan.id">{{tpPlan.codigoplan}} - {{tpPlan.nombreplan}}</option>
+                </select>
                 <div class="alert alert-danger" *ngIf= "plan.invalid && (plan.dirty || plan.touched)">
                     <div *ngIf= "plan.hasError('required')"  class = "text-danger"> 
                             El tipo de Plan de Medicina prepagada es obligatorio

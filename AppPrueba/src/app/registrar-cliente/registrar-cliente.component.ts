@@ -5,6 +5,13 @@ import { Cliente } from '../cliente';
 import { ClienteService } from '../cliente.service';
 import {Router} from '@angular/router';
 
+
+import { PlanesMP } from '../planes-mp';
+import { TpDoc } from '../tp-doc';
+import { PlanesMedPService } from '../planes-med-p.service';
+import { TpDocumentosService } from '../tp-documentos.service';
+
+
 @Component({
   selector: 'app-registrar-cliente',
   templateUrl: './registrar-cliente.component.html',
@@ -13,13 +20,19 @@ import {Router} from '@angular/router';
 export class RegistrarClienteComponent implements OnInit {
 
   clien : Cliente = new Cliente();
+  arrPlanesMP:PlanesMP[];
+  arrTpDoc:TpDoc[];
+  
    /*
   constructor(private cliServicio:ClienteService) { }
  */
-  constructor(private cliServicio:ClienteService,private router:Router) { 
+  constructor(private cliServicio:ClienteService,private router:Router,
+              private planServ:PlanesMedPService, private docServ:TpDocumentosService) { 
   }
 
   ngOnInit(): void {
+    this.obtenerTpDocumentos();  
+    this.obtenerPlanesMP();
   }
 
   guardarCliente(){
@@ -46,4 +59,17 @@ export class RegistrarClienteComponent implements OnInit {
   fetchDateSelected(){
     console.log("la fecha seleccionada es: " + this.DateSelected)
   }
+
+  private obtenerTpDocumentos(){
+    this.docServ.obtenerListaDeTpDoc().subscribe(dato => {
+      this.arrTpDoc=dato;
+    });
+  }
+  
+  private obtenerPlanesMP(){
+    this.planServ.obtenerListaDePlanesMP().subscribe(dato => {
+      this.arrPlanesMP=dato;
+    });
+  }
+
 }
