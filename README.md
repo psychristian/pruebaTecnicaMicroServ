@@ -107,5 +107,5 @@ Desde la web: https://start.spring.io/
 # 7 - Utiles:
 
 ### 7.1 - Comando comprobar puertos abiertos en windows
-  netstat -aon
-  taskkill /F /PID colocar_pid
+  * netstat -aon
+  * taskkill /F /PID colocar_pid
