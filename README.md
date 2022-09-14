@@ -8,7 +8,7 @@
 
  - Instalación de motor de base de datos MySQL. 
  - Creación base de datos: XPrueba
- - Creación objetos de base de datos.
+ - Creación objetos de base de datos. Script en la carpeta "2_DataBase".
  
 # 2 - Instalación y configuración de herramientas para el desarrollo: 
 
